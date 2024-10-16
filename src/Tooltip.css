@@ -1,7 +1,7 @@
 .tooltip {
     position: relative;
     display: inline-block;
-    min-height: max-content;
+    height: min-content
   }
   
   .tooltiptext {
@@ -29,25 +29,26 @@
     margin-bottom: 5px;
   }
   
-  .tooltiptext.top.center {
-    top: inherit;
-    bottom: calc(100% + 10px);
-    right: 0;
-    left: 0;
-    margin: auto;
-  }
+ 
   
   .tooltiptext.bottom {
     top: calc(100% + 10px);
     margin-top: 5px;
   }
-  
-  .tooltiptext.bottom.center {
-    bottom: inherit;
+  .tooltiptext.topCenter {
+    bottom: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 5px;
+}
+
+.tooltiptext.bottomCenter {
     top: calc(100% + 10px);
-    margin: auto;
-  }
-  
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 5px;
+}
+
   .tooltiptext.left {
     right: calc(100% + 10px);
     margin-right: 5px;
