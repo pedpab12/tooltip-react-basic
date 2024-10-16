@@ -36,9 +36,9 @@ export function Tooltip({ children, tooltipText, position = "left", duration = 2
             setAdjustedPosition('right');
         } else if (adjustedPosition === 'right' && spaceRight < tooltipRect.width) {
             setAdjustedPosition('left');
-        } else if (adjustedPosition === 'topCenter' && (spaceLeft < tooltipRect.width / 2 || spaceRight < tooltipRect.width / 2)) {
+        } else if (adjustedPosition === 'topCenter' && spaceAbove < tooltipRect.height) {
             setAdjustedPosition('bottomCenter');
-        } else if (adjustedPosition === 'bottomCenter' && (spaceLeft < tooltipRect.width / 2 || spaceRight < tooltipRect.width / 2)) {
+        } else if (adjustedPosition === 'bottomCenter' && spaceBelow < tooltipRect.height) {
             setAdjustedPosition('topCenter');
         }
 
