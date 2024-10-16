@@ -1,0 +1,13 @@
+{
+  "name": "tooltip-react-basic",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "react": "^17.0.2"
+  }
+}
