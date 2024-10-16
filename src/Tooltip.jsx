@@ -14,8 +14,7 @@ export function Tooltip({ children, tooltipText, position = "left", duration = 2
         topCenter: 'top center',
         bottomCenter: 'bottom center',
     };
-
-    useEffect(() => {
+    const adjustTooltipPosition = () => {
         const tooltip = tooltipRef.current;
         const parent = tooltip.parentElement;
 
@@ -41,6 +40,18 @@ export function Tooltip({ children, tooltipText, position = "left", duration = 2
         } else if (adjustedPosition === 'bottomCenter' && spaceBelow < tooltipRect.height) {
             setAdjustedPosition('topCenter');
         }
+    }
+    useEffect(() => {
+        // Ajustar la posición al montar el componente
+        adjustTooltipPosition();
+
+        // Ajustar la posición al redimensionar la ventana
+        window.addEventListener('resize', adjustTooltipPosition);
+
+        // Limpiar el listener al desmontar el componente
+        return () => {
+            window.removeEventListener('resize', adjustTooltipPosition);
+        };
 
     }, [adjustedPosition]);
 
