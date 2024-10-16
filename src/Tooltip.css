@@ -1,6 +1,7 @@
 .tooltip {
     position: relative;
     display: inline-block;
+    min-height: max-content;
   }
   
   .tooltiptext {
