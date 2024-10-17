@@ -56,7 +56,7 @@ export function Tooltip({ children, tooltipText, position = "left", duration = 2
     }, [adjustedPosition]);
 
     return (
-        <div className='tooltip'>
+        <div className='basic-tooltip'>
             {children}
             <span
                 ref={tooltipRef}

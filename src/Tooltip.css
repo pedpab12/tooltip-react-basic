@@ -1,10 +1,10 @@
-.tooltip {
+.basic-tooltip {
     position: relative;
     display: inline-block;
     height: min-content
   }
   
-  .tooltiptext {
+  .basic-tooltip .tooltiptext {
     visibility: hidden;
     width: max-content;
     background-color: black;
@@ -18,48 +18,48 @@
     transition: opacity 0.3s;
   }
   
-  .tooltip:hover .tooltiptext {
+  .basic-tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
   }
   
   /* Estilos para las diferentes posiciones */
-  .tooltiptext.top {
+  .basic-tooltip .tooltiptext.top {
     bottom: calc(100% + 10px);
     margin-bottom: 5px;
   }
   
  
   
-  .tooltiptext.bottom {
+  .basic-tooltip .tooltiptext.bottom {
     top: calc(100% + 10px);
     margin-top: 5px;
   }
-  .tooltiptext.topCenter {
+  .basic-tooltip .tooltiptext.topCenter {
     bottom: calc(100% + 10px);
     left: 50%;
     transform: translateX(-50%);
     margin-bottom: 5px;
 }
 
-.tooltiptext.bottomCenter {
+.basic-tooltip .tooltiptext.bottomCenter {
     top: calc(100% + 10px);
     left: 50%;
     transform: translateX(-50%);
     margin-top: 5px;
 }
 
-  .tooltiptext.left {
+  .basic-tooltip .tooltiptext.left {
     right: calc(100% + 10px);
     margin-right: 5px;
   }
   
-  .tooltiptext.right {
+ .basic-tooltip .tooltiptext.right {
     left: calc(100% + 10px);
     margin-left: 5px;
   }
   
-  .tooltiptext.center {
+  .basic-tooltip .tooltiptext.center {
     top: 0;
     left: 0;
     right: 0;
